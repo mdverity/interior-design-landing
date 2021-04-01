@@ -27,7 +27,7 @@ const Contact = () => {
         </Col>
         <Col md={5} className='m-md-auto mt-2'>
           {/* <Card className='p-2' bg='light'> */}
-          <Form netlify onSubmit={handleSubmit}>
+          <Form name='contact' netlify onSubmit={handleSubmit}>
             <Form.Group className='d-flex flex-column' controlId='formEmail'>
               <Form.Control
                 name='email'
@@ -80,7 +80,7 @@ const Contact = () => {
                   className='text-dark'
                   type='checkbox'
                   label='Services'
-                  name='Services'
+                  name='services'
                   checked={values.services}
                   onChange={handleChange}
                 />
@@ -88,7 +88,7 @@ const Contact = () => {
                   className='text-dark'
                   type='checkbox'
                   label='Estimate'
-                  name='Estimate'
+                  name='estimate'
                   checked={values.estimate}
                   onChange={handleChange}
                 />
@@ -96,7 +96,7 @@ const Contact = () => {
                   className='text-dark'
                   type='checkbox'
                   label='Products'
-                  name='Products'
+                  name='products'
                   checked={values.products}
                   onChange={handleChange}
                 />
@@ -104,7 +104,7 @@ const Contact = () => {
                   className='text-dark'
                   type='checkbox'
                   label='Consultation'
-                  name='Consultation'
+                  name='consultation'
                   checked={values.consultation}
                   onChange={handleChange}
                 />

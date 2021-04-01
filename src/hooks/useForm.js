@@ -18,20 +18,13 @@ const useForm = () => {
       .join('&')
   }
 
-  //   const handleChange = (e) => {
-  //     const { name, value } = e.target
-  //     setValues({
-  //       ...values,
-  //       [name]: value,
-  //     })
-  //   }
-
   const handleChange = (e) => {
     const target = e.target
     const value = target.type === 'checkbox' ? target.checked : target.value
     const name = target.name
 
     setValues({
+      ...values,
       [name]: value,
     })
   }
@@ -51,7 +44,7 @@ const useForm = () => {
           products: false,
           consultation: false,
         })
-        alert("Thank you! I'll be in touch.")
+        alert("Thank you! We'll be in touch.")
       })
       .catch((error) => alert(error))
 
