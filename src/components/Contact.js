@@ -2,8 +2,11 @@ import React from 'react'
 import { Form, Button, Row, Col, Container } from 'react-bootstrap'
 import styled from 'styled-components'
 import contactImg from '../assets/images/contact.jpg'
+import useForm from '../hooks/useForm'
 
 const Contact = () => {
+  const { handleChange, values, handleSubmit } = useForm()
+
   return (
     <Container id='contact'>
       <Row>
@@ -24,11 +27,14 @@ const Contact = () => {
         </Col>
         <Col md={5} className='m-md-auto mt-2'>
           {/* <Card className='p-2' bg='light'> */}
-          <Form>
+          <Form netlify onSubmit={handleSubmit}>
             <Form.Group className='d-flex flex-column' controlId='formEmail'>
               <Form.Control
+                name='email'
                 type='email'
                 className='text-center mt-2'
+                value={values.email}
+                onChange={handleChange}
                 placeholder='Your Email Address'
                 style={{
                   resize: 'none',
@@ -45,8 +51,11 @@ const Contact = () => {
             <Form.Group controlId='formMessage'>
               <Form.Control
                 as='textarea'
+                name='message'
                 className='text-center'
                 placeholder='Your Message'
+                value={values.message}
+                onChange={handleChange}
                 rows={3}
                 style={{
                   resize: 'none',
@@ -59,6 +68,7 @@ const Contact = () => {
               />
             </Form.Group>
             <Form.Group
+              name='help-with'
               controlId='formBasicCheckbox'
               className='d-flex flex-column justify-items-center'
             >
@@ -70,21 +80,33 @@ const Contact = () => {
                   className='text-dark'
                   type='checkbox'
                   label='Services'
+                  name='Services'
+                  checked={values.services}
+                  onChange={handleChange}
                 />
                 <Form.Check
                   className='text-dark'
                   type='checkbox'
                   label='Estimate'
+                  name='Estimate'
+                  checked={values.estimate}
+                  onChange={handleChange}
                 />
                 <Form.Check
                   className='text-dark'
                   type='checkbox'
                   label='Products'
+                  name='Products'
+                  checked={values.products}
+                  onChange={handleChange}
                 />
                 <Form.Check
                   className='text-dark'
                   type='checkbox'
                   label='Consultation'
+                  name='Consultation'
+                  checked={values.consultation}
+                  onChange={handleChange}
                 />
               </div>
             </Form.Group>
