@@ -7,6 +7,12 @@ import useForm from '../hooks/useForm'
 const Contact = () => {
   const { handleChange, values, handleSubmit } = useForm()
 
+  const { REACT_APP_GMAPS_KEY } = process.env
+
+  const gMapsAPI =
+    'https://www.google.com/maps/embed/v1/place?q=place_id:EiBNYWluIFN0LCBOZXcgWW9yaywgTlkgMTAwNDQsIFVTQSIuKiwKFAoSCfsuPyPFWMKJEfU1z80AKHbzEhQKEgk7CD_TpU_CiRFi_nfhBo8LyA&key=' +
+    REACT_APP_GMAPS_KEY
+
   return (
     <Container id='contact'>
       <Row>
@@ -27,7 +33,7 @@ const Contact = () => {
         </Col>
         <Col md={5} className='m-md-auto mt-2'>
           {/* <Card className='p-2' bg='light'> */}
-          <Form name='contact' netlify onSubmit={handleSubmit}>
+          <Form name='contact' data-netlify='true' onSubmit={handleSubmit}>
             <Form.Group className='d-flex flex-column' controlId='formEmail'>
               <Form.Control
                 name='email'
@@ -114,9 +120,22 @@ const Contact = () => {
               Submit
             </Button>
           </Form>
+
           {/* </Card> */}
         </Col>
       </Row>
+      <div style={{ display: 'grid', placeItems: 'center', marginTop: '4rem' }}>
+        <iframe
+          title='google-maps'
+          width='600'
+          height='400'
+          loading='lazy'
+          style={{ border: '1px solid rgba(100,100,100,0.5)' }}
+          allowFullScreen
+          className='mx-auto'
+          src={gMapsAPI}
+        ></iframe>
+      </div>
     </Container>
   )
 }
