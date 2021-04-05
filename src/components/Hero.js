@@ -48,6 +48,7 @@ const HeroContainer = styled(Jumbotron)`
   background: url(${hero1}) no-repeat center;
   height: 650px;
   border-bottom: 1px solid #303030;
+  z-index: 2;
 `
 const HeroContent = styled.div`
   padding: 1rem;

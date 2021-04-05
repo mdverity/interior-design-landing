@@ -49,7 +49,7 @@ const Showcase = () => {
 
   return (
     <Container id='showcase'>
-      <motion.div
+      <MotionContainer
         id='showcase'
         ref={itemOne}
         animate={animation1}
@@ -87,9 +87,9 @@ const Showcase = () => {
             </div>
           </Col>
         </Row>
-      </motion.div>
+      </MotionContainer>
       <SpacerSM />
-      <motion.div
+      <MotionContainer
         id='showcase'
         ref={itemTwo}
         animate={animation2}
@@ -128,9 +128,9 @@ const Showcase = () => {
             </div>
           </Col>
         </Row>
-      </motion.div>
+      </MotionContainer>
       <SpacerSM />
-      <motion.div
+      <MotionContainer
         id='showcase'
         ref={itemThree}
         animate={animation3}
@@ -168,12 +168,18 @@ const Showcase = () => {
             </div>
           </Col>
         </Row>
-      </motion.div>
+      </MotionContainer>
     </Container>
   )
 }
 
 export default Showcase
+
+const MotionContainer = styled(motion.div)`
+  * {
+    z-index: 2;
+  }
+`
 
 const SpacerSM = styled.div`
   height: 2rem;

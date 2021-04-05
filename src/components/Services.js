@@ -14,7 +14,7 @@ const Services = () => {
     selected === 1 ? { fontWeight: '600' } : { fontWeight: '400' }
 
   return (
-    <Container id='services'>
+    <ServicesContainer id='services'>
       <h1
         className='text-center mt-5'
         style={{
@@ -86,11 +86,17 @@ const Services = () => {
         </Row>
       </Card>
       <SpacerSM />
-    </Container>
+    </ServicesContainer>
   )
 }
 
 export default Services
+
+const ServicesContainer = styled(Container)`
+  * {
+    z-index: 2;
+  }
+`
 
 const ProductImage = styled.img`
   max-width: 100%;

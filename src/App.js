@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Services from './components/Services'
 import { SiAffinitydesigner } from 'react-icons/si'
 import Hero from './components/Hero'
+import { RellaxWrapper } from 'react-rellax-wrapper'
 
 function App() {
   scrollSpy.update()
@@ -48,11 +49,59 @@ function App() {
       </Navbar>
       <Hero />
       <SpacerLG />
+      <RellaxWrapper
+        speed={-6}
+        percentage={0.3}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '200px', height: '200px', left: '15%' }} />
+      </RellaxWrapper>
       <Showcase />
+      <RellaxWrapper
+        speed={3}
+        percentage={-1}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '300px', height: '300px', right: '10%' }} />
+      </RellaxWrapper>
       <Jumbo1 fluid className='mt-5' />
+      <RellaxWrapper
+        speed={-3}
+        percentage={0.6}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '300px', height: '300px', left: '0' }} />
+      </RellaxWrapper>
       <Services />
+      <RellaxWrapper
+        speed={5}
+        percentage={0.5}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '200px', height: '200px', right: '0' }} />
+      </RellaxWrapper>
       <Jumbo2 fluid className='mt-5' />
+      <RellaxWrapper
+        speed={-3}
+        percentage={0.2}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '200px', height: '200px', left: '10%' }} />
+      </RellaxWrapper>
       <SpacerSM />
+      <RellaxWrapper
+        speed={-4}
+        percentage={0}
+        style={{ position: 'relative', maxWidth: '1200px' }}
+        className='mx-auto'
+      >
+        <Parallax style={{ width: '200px', height: '200px', right: '5%' }} />
+      </RellaxWrapper>
       <Contact />
       <Footer />
     </div>
@@ -62,13 +111,17 @@ function App() {
 export default App
 
 const Jumbo1 = styled(Jumbotron)`
+  position: relative;
   background: url(${jumbo1}) no-repeat center;
   height: 350px;
+  z-index: 2;
 `
 
 const Jumbo2 = styled(Jumbotron)`
+  position: relative;
   background: url(${jumbo2}) no-repeat center;
   height: 350px;
+  z-index: 2;
 `
 
 const SpacerLG = styled.div`
@@ -77,6 +130,13 @@ const SpacerLG = styled.div`
 
 const SpacerSM = styled.div`
   height: 2rem;
+`
+
+const Parallax = styled.div`
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  position: absolute;
+  border-radius: 1px;
 `
 
 const Navlink = styled(Link)`

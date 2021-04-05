@@ -213,6 +213,7 @@ const Contact = () => {
             maxHeight: '400px',
             width: '100%',
             height: '100%',
+            zIndex: '2',
           }}
           allowFullScreen
           className='mx-auto'
