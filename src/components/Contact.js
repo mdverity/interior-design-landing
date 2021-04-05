@@ -35,11 +35,11 @@ const Contact = () => {
 
   const { handleChange, values, handleSubmit } = useForm()
 
-  const { REACT_APP_GMAPS_KEY } = process.env
+  const API_KEY = process.env.REACT_APP_GMAPS_KEY
 
   const gMapsAPI =
     'https://www.google.com/maps/embed/v1/place?q=place_id:EiBNYWluIFN0LCBOZXcgWW9yaywgTlkgMTAwNDQsIFVTQSIuKiwKFAoSCfsuPyPFWMKJEfU1z80AKHbzEhQKEgk7CD_TpU_CiRFi_nfhBo8LyA&key=' +
-    REACT_APP_GMAPS_KEY
+    API_KEY.toString()
 
   return (
     <Container id='contact'>
