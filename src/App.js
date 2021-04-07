@@ -25,9 +25,12 @@ function App() {
           borderBottom: '1px solid rgba(0, 0, 0, 0.33',
         }}
       >
-        <Navbar.Brand href='#home' style={{ fontWeight: '500' }}>
+        <Navbar.Brand
+          href='#home'
+          style={{ fontWeight: '500', fontFamily: 'Montserrat Subrayada' }}
+        >
           <SiAffinitydesigner className='mb-1 mr-1' />
-          DESIGN
+          DESIGNLINE
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
