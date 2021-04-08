@@ -185,6 +185,7 @@ const Contact = () => {
           </motion.div>
         </Col>
       </Row>
+      {/* <Jumbotron fluid className='p-0'> */}
       <motion.div
         ref={mapRef}
         animate={animTwo}
@@ -201,7 +202,7 @@ const Contact = () => {
           display: 'grid',
           placeItems: 'center',
           marginTop: '4rem',
-          height: '400px',
+          height: '300px',
         }}
       >
         <iframe
@@ -209,8 +210,8 @@ const Contact = () => {
           loading='lazy'
           style={{
             border: '1px solid rgba(100,100,100,0.5)',
-            maxWidth: '600px',
-            maxHeight: '400px',
+            // maxWidth: '600px',
+            maxHeight: '300px',
             width: '100%',
             height: '100%',
             zIndex: '2',
@@ -220,6 +221,7 @@ const Contact = () => {
           src={gMapsAPI}
         ></iframe>
       </motion.div>
+      {/* </Jumbotron> */}
     </Container>
   )
 }

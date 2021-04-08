@@ -8,10 +8,14 @@ const Services = () => {
   const [selected, setSelected] = useState(0)
 
   let inputStyle =
-    selected === 0 ? { fontWeight: '600' } : { fontWeight: '400' }
+    selected === 0
+      ? { fontWeight: '700', backgroundColor: '#ecebe9' }
+      : { fontWeight: '500' }
 
   let inputStyle2 =
-    selected === 1 ? { fontWeight: '600' } : { fontWeight: '400' }
+    selected === 1
+      ? { fontWeight: '700', backgroundColor: '#ecebe9' }
+      : { fontWeight: '500' }
 
   return (
     <ServicesContainer id='services'>
