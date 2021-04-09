@@ -18,9 +18,9 @@ const Services = () => {
       : { fontWeight: '500' }
 
   return (
-    <ServicesContainer id='services'>
+    <ServicesContainer id='services' fluid>
       <h1
-        className='text-center mt-5'
+        className='text-center pt-5'
         style={{
           color: '#303030',
           borderBottom: '1px solid #dec9a8',
@@ -30,8 +30,8 @@ const Services = () => {
       </h1>
       <SpacerSM />
       <Card
-        className='shadow'
-        style={{ background: '#f5f4f3', height: '100%' }}
+        className='shadow mx-auto mx-md-auto mx-3 '
+        style={{ background: '#f5f4f3', height: '100%', maxWidth: '900px' }}
       >
         <Row>
           <Col md={6}>
@@ -81,11 +81,7 @@ const Services = () => {
             </TextWrap>
           </Col>
           <Col md={6} className='p-0'>
-            <ProductImage
-              src={products2}
-              className='mt-lg-0 mt-4'
-              alt='product1'
-            />
+            <ProductImage src={products2} className='mt-lg-0' alt='product1' />
           </Col>
         </Row>
       </Card>
@@ -97,17 +93,27 @@ const Services = () => {
 export default Services
 
 const ServicesContainer = styled(Container)`
+  background-color: #dedbd7;
+  padding: 0;
+
   * {
     z-index: 2;
   }
 `
 
 const ProductImage = styled.img`
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.35);
+
+  /* @media screen and (max-width: 1024px) {
+    width: 80%;
+    height: auto;
+    align-content: center;
+  } */
 `
+
 const SpacerSM = styled.div`
   height: 5rem;
 `

@@ -61,50 +61,10 @@ function App() {
         <Parallax style={{ width: '200px', height: '200px', left: '15%' }} />
       </RellaxWrapper> */}
       <Showcase />
-      {/* <RellaxWrapper
-        speed={3}
-        percentage={-1}
-        style={{ position: 'relative', maxWidth: '1200px' }}
-        className='mx-auto'
-      >
-        <Parallax style={{ width: '300px', height: '300px', right: '10%' }} />
-      </RellaxWrapper> */}
-      <Jumbo1 fluid className='mt-5' />
-      {/* <RellaxWrapper
-        speed={-3}
-        percentage={0.6}
-        style={{ position: 'relative', maxWidth: '1200px' }}
-        className='mx-auto'
-      >
-        <Parallax style={{ width: '300px', height: '300px', left: '0' }} />
-      </RellaxWrapper> */}
+      <Jumbo1 fluid className='m-0' />
       <Services />
-      {/* <RellaxWrapper
-        speed={5}
-        percentage={0.5}
-        style={{ position: 'relative', maxWidth: '1200px' }}
-        className='mx-auto'
-      >
-        <Parallax style={{ width: '200px', height: '200px', right: '0' }} />
-      </RellaxWrapper> */}
-      <Jumbo2 fluid className='mt-5' />
-      {/* <RellaxWrapper
-        speed={-3}
-        percentage={0.2}
-        style={{ position: 'relative', maxWidth: '1200px' }}
-        className='mx-auto'
-      >
-        <Parallax style={{ width: '200px', height: '200px', left: '10%' }} />
-      </RellaxWrapper> */}
+      <Jumbo2 fluid />
       <SpacerSM />
-      {/* <RellaxWrapper
-        speed={-4}
-        percentage={0}
-        style={{ position: 'relative', maxWidth: '1200px' }}
-        className='mx-auto'
-      >
-        <Parallax style={{ width: '200px', height: '200px', right: '5%' }} />
-      </RellaxWrapper> */}
       <Contact />
       <Footer />
     </div>

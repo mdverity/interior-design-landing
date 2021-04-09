@@ -48,7 +48,7 @@ const Showcase = () => {
   }, [animation3, itemThreeView])
 
   return (
-    <Container id='showcase'>
+    <Container id='showcase' className='mb-5'>
       <MotionContainer
         id='showcase'
         ref={itemOne}
